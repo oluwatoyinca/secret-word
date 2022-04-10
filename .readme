@@ -1,0 +1,21 @@
+This is a secret wordapp that searches for a secret word based on the secret key defined in the code. 
+In this case 'if the word has two vowels followed by two consonants', it counts as a secret word.
+The application returns the number of secrets word found as well as the all the secret words that match the secret key (not the whole word in which it is found).
+
+Using Application with PostMan
+    Providing a word:
+        POST /secret-words raw JSON
+        Sample accepted JSON:
+            const requestBody = {
+                    "wordsBox": [
+                        "bcdaaa", "auaabc", "aabcca", "aaxlaa", "opolpp", "sskkzl"
+                    ]
+                }
+        Requirements:
+            WordsBox is required and must not be empty
+            WordsBox should have an array of at least 4 words of 4 letters each
+            WordsBox's array must always be a square
+            All words in WordsBox's array must contain only lowercase letters
+            All words in WordsBox's array must be of the same length
+
+Details on requirements can be gotten from test/candidate.test.js
